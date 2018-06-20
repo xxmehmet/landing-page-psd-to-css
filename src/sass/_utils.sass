@@ -1,0 +1,57 @@
+.u-no-padding
+  padding: 0
+
+.u-text-left
+  text-align: left
+
+.u-text-right
+  text-align: right
+
+.u-text-center
+  text-align: center
+
+.u-vertical-center
+  display: flex
+  flex-direction: column
+  align-self: center
+  
+.u-top-large
+  margin-top: em(40)
+
+.u-img-circle
+  border-radius: 50%
+
+.u-hidden
+  display: none
+
+@include mq("phone", "min")
+  .u-hidden\@sm-up
+    display: none
+
+@include mq("tablet", "min")
+  .u-hidden\@md-up
+    display: none
+
+@include mq("desktop", "min")
+  .u-hidden\@lg-up
+    display: none
+    
+@include mq("large", "min")
+  .u-hidden\@xl-up
+    display: none
+
+@include mq("phone", "max")
+  .u-hidden\@xs-down
+    display: none
+
+@include mq("tablet", "max")
+  .u-hidden\@sm-down
+    display: none
+
+@include mq("desktop", "max")
+  .u-hidden\@md-down
+    display: none
+    
+@include mq("large", "max")
+  .u-hidden\@xl-down
+    display: none

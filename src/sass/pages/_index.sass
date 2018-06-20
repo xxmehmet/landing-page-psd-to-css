@@ -1,0 +1,296 @@
+.c-section
+  &__title
+    font-family: $font-family-3
+    font-weight: 900
+    color: $color-title
+    margin: 0
+  
+  &__description
+    color: $color-paragraph
+
+  &__button
+    @include mq()
+      text-align: center
+
+.c-main-header
+  position: relative
+  background-color: #fff
+  padding-top: 50px
+  min-height: 750px
+
+  @include mq()
+    min-height: 400px
+
+  &:after
+    content: ""
+    position: absolute
+    width: 100%
+    height: 550px
+    bottom: -120px
+    background-image: url(#{$assets-path}img/masthead.png)
+    background-size: 80%
+    background-repeat: no-repeat
+    background-position: center bottom
+
+    @include mq()
+      bottom: -30px
+
+.c-companies
+  background-color: #f9f9f9
+  padding-top: 150px
+  padding-bottom: 40px
+
+  &__list
+    display: inline-flex
+    list-style: none
+    margin-top: 35px
+    padding: 0
+
+    @include mq()
+      display: inline
+
+    &-item
+      display: inline-block
+      padding-left: 20px
+      padding-right: 20px
+
+      a
+        font-size: 32px
+
+      & + &
+        padding-left: 12px
+        padding-right: 12px
+
+.c-product
+  background-color: #fff
+  padding-top: 120px
+  padding-bottom: 60px
+
+  @include mq()
+    padding-top: 60px
+
+  &__mockup
+    position: relative
+    padding-bottom: 57.94702%
+    background-image: url(#{$assets-path}img/macbook-silver.svg)
+    background-size: cover
+
+    &-screen
+      position: absolute
+      background-size: cover
+      pointer-events: none
+      top: 6.71429%
+      left: 11.83775%
+      width: 76.40728%
+      height: 82.42857%
+      background-position: center
+
+.c-specs
+  background-color: #efeff0
+  padding-top: 55px
+  padding-bottom: 90px
+
+  @include mq()
+    padding-bottom: 30px
+
+  &__slider
+    &__list
+      display: flex
+      align-items: center
+      justify-content: space-around
+      list-style: none
+      border-bottom: 1px solid #b9b9b9
+      margin: 0
+      padding: 0 0 15px 0
+
+      &-item
+        position: relative
+        display: block
+        text-align: center
+        cursor: pointer
+        outline: none
+
+        &.tns-nav-active
+          display: inline-block
+
+          img
+            filter: grayscale(0)
+
+          &:before
+            content: ""
+            position: absolute
+            width: 100%
+            height: 3px
+            background-color: $color-secondary
+            bottom: -16px
+            left: 0
+
+          &:after
+            content: ""
+            position: absolute
+            bottom: -29px
+            left: 50%
+            margin-left: -16px
+            width: 0
+            height: 0
+            border-top: solid 16px $color-secondary
+            border-left: solid 16px transparent
+            border-right: solid 16px transparent
+
+      &-icon
+        display: block
+        filter: grayscale(100%)
+        height: 75px
+        margin-bottom: 15px
+        margin-left: auto
+        margin-right: auto
+      
+      &-title
+        display: block
+        font-family: $font-family-1
+        font-weight: 700
+        font-size: 15px
+        color: #42394d
+
+.c-slider
+  margin-top: 45px
+
+.c-price
+  background-color: $color-primary
+  padding-top: 113px
+  padding-bottom: 113px
+  
+  @include mq()
+    padding-top: 30px
+    padding-bottom: 30px
+
+  h3,
+  p
+    color: #fff
+
+.c-testimonial__box
+  position: relative
+  border: 1px solid #b9b9b9
+  margin-top: 115px
+  padding: 45px
+
+  @include mq()
+    margin-top: 60px
+
+  &__list
+    position: absolute
+    display: inline-flex
+    justify-content: center
+    top: -30px
+    list-style: none
+    margin: 0 0 0 -45px
+    padding: 0
+    width: 100%
+
+    &-item
+      position: relative
+      display: block
+      padding-left: 7.5px
+      padding-right: 7.5px
+      cursor: pointer
+      outline: none
+
+      img
+        width: 60px
+        height: 60px
+
+.c-testimonial__slider
+  &__item
+    &-meta
+      color: #fff
+
+.c-pricing__box
+  background-color: #fff
+  border-radius: 5px
+  padding: 50px
+
+  @include mq()
+    margin-top: 30px
+
+  &__features
+    list-style: none
+    margin: 0
+    padding: 0
+
+    &-list
+      position: relative
+      display: block
+      padding-bottom: 25px
+
+      svg
+        font-size: 24px
+        margin-right: 12px
+        vertical-align: middle
+
+      span
+        font-size: 16px
+        color: #252e41
+        vertical-align: middle
+  
+    &-off:after
+      content: ""
+      position: absolute
+      left: -5px
+      width: 28px
+      height: 28px
+      background-image: url(#{$assets-path}img/icon-remove.svg)
+      background-repeat: no-repeat
+
+  &__cost
+    margin-top: 10px
+    margin-bottom: 20px
+    color: #252e41
+
+    &-price
+      font-size: 50px
+      font-weight: 700     
+
+    &-type
+      font-size: 25px
+
+  &-info
+    display: block
+    font-size: 14px
+    color: #6a7b9e
+    margin-top: 4px
+
+.c-timeline
+  padding-top: 100px
+  padding-bottom: 100px
+
+  @include mq()
+    padding-top: 30px
+    padding-bottom: 30px
+
+.c-register
+  background-color: $color-secondary
+  padding-top: 45px
+  padding-bottom: 45px
+  
+  &__body
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @include mq()
+      display: inline
+      text-align: center
+
+  &__head
+    @include mq()
+      margin-bottom: 30px
+
+    h3,
+    p
+      color: #fff
+      margin: 0
+      padding: 0
+
+      a
+        color: #fff
+        text-decoration: underline

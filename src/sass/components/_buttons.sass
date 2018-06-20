@@ -1,0 +1,42 @@
+.c-button
+  position: relative
+  display: inline-block
+  padding: 8.5px 18px
+  font-family: $font-family-2
+  font-size: 16px
+  line-height: 1.5
+  text-align: center
+  cursor: pointer
+  border-radius: 30px
+  border: .1rem solid transparent
+  font-weight: 400
+  transition: all .3s
+
+.c-button--primary
+  background-color: $color-primary
+  color: #fff
+
+  &:focus,
+  &:hover
+    background-color: darken($color-primary, 10%)
+    color: #fff
+
+.c-button--outline
+  border-color: $color-primary
+  color: $color-primary
+
+  &:focus,
+  &:hover
+    background-color: $color-primary
+    color: #fff
+
+.c-button--white
+  background-color: #fff
+  color: $color-title
+
+  &:focus,
+  &:hover
+    color: $color-title
+
+.c-button--large
+  padding: 12px 80px
